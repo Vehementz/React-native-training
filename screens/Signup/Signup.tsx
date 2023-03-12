@@ -4,6 +4,10 @@ import styles from "./../../components/FormSign/formSign.module.scss";
 import { CREATE_USER } from "../../graphql/mutations";
 import { TextInput } from "react-native-gesture-handler";
 import { Button } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
+const { navigate } = useNavigation();
+
 
 function Signup() {
   const [email, setEmail] = useState("test@mail.com");
@@ -63,9 +67,9 @@ function Signup() {
           <Button disabled={loading} onPress={doSignup} title ="Inscription" />
         </div>
         <div>
-          <p>
-            Avez-vous déja un <a href="X">compte?</a>
-          </p>
+          <Button disabled={loading} onPress={() => navigate("Signup")}>
+             Avez-vous déja un <a href="X">compte?</a>
+          </Button>
         </div>
       </form>
     </main>
