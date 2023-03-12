@@ -1,0 +1,60 @@
+.logingMain{
+  .form{
+      display: grid;
+      grid-template-columns: 1fr;
+      margin-top: 40px;
+      width: 430px;
+      min-height: 500px;
+      margin-right: auto;
+      margin-left: auto;
+      border-radius: 20px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      padding: 20px;
+      align-self: center;
+
+      div{
+          display: grid;
+      }
+      a{
+          text-decoration: none;
+          color: black;
+          font-weight: bold;
+      }
+      h3{
+          font-size: 24px;
+          text-align: center;
+          align-self: center;
+          margin-top: 20px;
+          margin-bottom: 20p;
+      }
+      p{
+          margin: 0px;
+          margin-left: auto;
+          margin-right: auto;
+      }
+      input{
+          width: 80%;
+          height: 30px;
+          margin-right: auto;
+          margin-left: auto;
+          outline: none;
+          border-left: hidden;
+          border-right: hidden;
+          border-top: hidden;
+      }
+      button{
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          width: 30%;
+          max-height: 40px;
+          border-radius: 5px;
+          border: 0.3px solid black;
+          color: white;
+          margin-right: auto;
+          margin-left: auto;
+          background: linear-gradient(to right ,blue, rgb(0, 173, 226));
+      }
+  }
+}

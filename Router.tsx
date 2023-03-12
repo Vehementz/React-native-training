@@ -1,7 +1,7 @@
 import { createStackNavigator } from "@react-navigation/stack";
-import { Dashboard } from "./screens/Dashboard";
-import { Signin } from "./screens/Signin";
-import { Signup } from "./screens/Signup";
+import { Dashboard } from "./screensaurelienfolder/Dashboard";
+import { Signin } from "./screensaurelienfolder/Signin";
+import { Signup } from "./screensaurelienfolder/Signup";
 
 const Stack = createStackNavigator<{
   Signup: undefined;

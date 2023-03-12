@@ -13,7 +13,14 @@ import Router from "./Router";
 import { NavigationContainer } from "@react-navigation/native";
 
 const httpLink = createHttpLink({
+  //
+  // uri: "http://192.168.152.32", pour l'adresse avec router
+  // Tout les devices tels quel  les machines virtuelles ou emulateur
+  // peuvent communiquer avec le parent en allant 
+  // sur sur l'address ip   "http://10.0.2.2:5000" donc addresse à utiliser si emulateur utilisé
   uri: "http://192.168.152.32",
+
+
 });
 
 const authLink = setContext(async (_, { headers }) => {
@@ -48,10 +55,11 @@ function Main() {
   async function onTokenChange(token?: string) {
     // console.log(token)
     if (token) {
-      localStorage.setItem("token", token);
+       await AsyncStorage.setItem("token", token);
       console.log("logged in");
     } else {
-      localStorage.removeItem("token");
+      await AsyncStorage.setItem("token", token);
+      .removeItem("token");
       console.log("logged out");
     }
     console.log("refetching");
@@ -107,6 +115,9 @@ function Main() {
 
 
 function App() {
+
+// or NavigationContainer between UserProvider Component
+
   return (
     <ApolloProvider client={client}>
       <NavigationContainer>
